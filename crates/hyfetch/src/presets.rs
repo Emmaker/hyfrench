@@ -216,6 +216,8 @@ pub enum Preset {
 
     /// Colors from Gilbert Baker's original 1978 flag design
     Baker,
+
+    French,
 }
 
 #[derive(Clone, Eq, PartialEq, Debug)]
@@ -632,6 +634,10 @@ impl Preset {
                 "#F23D9E", "#F80A24", "#F78022", "#F9E81F", "#1E972E", "#1B86BC", "#243897",
                 "#6F0A82",
             ]),
+
+            Self::French => {
+                ColorProfile::from_hex_colors(vec!["#0055A4", "#FFFFFF", "#EF4135"])
+            },
         })
         .expect("preset color profiles should be valid")
     }
